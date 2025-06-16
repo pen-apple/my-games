@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Clicker Madness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="retro-title">RETRO CLICKER</h1>
+        <div class="score-container">
+            <span class="retro-text">SCORE:</span>
+            <span id="score" class="retro-score">0</span>
+        </div>
+        
+        <div class="click-area">
+            <button id="click-btn" class="retro-button">CLICK!</button>
+        </div>
+
+        <div class="upgrades-container">
+            <div class="upgrade" id="upgrade1">
+                <h3 class="retro-text">8-BIT POWER</h3>
+                <p>+2 per click</p>
+                <p class="cost">Cost: 10</p>
+                <button class="upgrade-btn" id="upgrade1-btn">BUY</button>
+            </div>
+
+            <div class="upgrade" id="upgrade2">
+                <h3 class="retro-text">PIXEL MASTER</h3>
+                <p>+5 per click</p>
+                <p class="cost">Cost: 50</p>
+                <button class="upgrade-btn" id="upgrade2-btn">BUY</button>
+            </div>
+
+            <div class="upgrade" id="autoClicker1">
+                <h3 class="retro-text">ARCADE BOT</h3>
+                <p>+2/sec</p>
+                <p class="cost">Cost: <span id="autoCost">100</span></p>
+                <p>Owned: <span id="autoOwned">0</span></p>
+                <button class="upgrade-btn" id="autoBtn">BUY</button>
+            </div>
+
+            <div class="upgrade" id="upgrade3">
+                <h3 class="retro-text">RETRO RUSH</h3>
+                <p>+10 per click</p>
+                <p class="cost">Cost: 300</p>
+                <button class="upgrade-btn" id="upgrade3-btn">BUY</button>
+            </div>
+
+            <div class="upgrade" id="autoClicker2">
+                <h3 class="retro-text">PIXEL ARMY</h3>
+                <p>+5/sec</p>
+                <p class="cost">Cost: <span id="autoCost2">500</span></p>
+                <p>Owned: <span id="autoOwned2">0</span></p>
+                <button class="upgrade-btn" id="autoBtn2">BUY</button>
+            </div>
+
+            <div class="upgrade" id="upgrade4">
+                <h3 class="retro-text">RETRO OVERDRIVE</h3>
+                <p>+50 per click</p>
+                <p class="cost">Cost: 2000</p>
+                <button class="upgrade-btn" id="upgrade4-btn">BUY</button>
+            </div>
+
+            <div class="upgrade" id="autoClicker3">
+                <h3 class="retro-text">ARCADE LEGION</h3>
+                <p>+20/sec</p>
+                <p class="cost">Cost: <span id="autoCost3">3000</span></p>
+                <p>Owned: <span id="autoOwned3">0</span></p>
+                <button class="upgrade-btn" id="autoBtn3">BUY</button>
+            </div>
+        </div>
+
+        <button id="restart-btn" class="retro-button">RESTART</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

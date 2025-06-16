@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-color: #ff00ff;
+    --secondary-color: #00ffff;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --button-color: #ff0000;
+    --upgrade-bg: #000080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ff00ff"><path d="M0 0h8v8H0z"/><path d="M16 16h8v8h-8z"/></svg>') 0 0, auto;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%),
+        linear-gradient(-45deg, #000 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #000 75%),
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    max-width: 800px;
+    width: 100%;
+}
+
+.retro-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 4px 4px 0 var(--secondary-color);
+    animation: glitch 1s infinite;
+}
+
+.score-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.retro-score {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 0 var(--primary-color);
+}
+
+.click-area {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.retro-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s;
+    border: 4px solid var(--text-color);
+}
+
+.retro-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.retro-button:active {
+    transform: scale(0.95);
+}
+
+.upgrades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.upgrade {
+    background-color: var(--upgrade-bg);
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.upgrade:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--primary-color);
+}
+
+.retro-text {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.cost {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.upgrade-btn {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upgrade-btn:hover:not(:disabled) {
+    background-color: var(--primary-color);
+}
+
+.upgrade-btn:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 4px 4px 0 var(--secondary-color);
+    }
+    25% {
+        text-shadow: -4px -4px 0 var(--primary-color);
+    }
+    50% {
+        text-shadow: 4px -4px 0 var(--secondary-color);
+    }
+    75% {
+        text-shadow: -4px 4px 0 var(--primary-color);
+    }
+    100% {
+        text-shadow: 4px 4px 0 var(--secondary-color);
+    }
+}
+
+/* Retro cursor effects */
+.retro-button:hover,
+.upgrade-btn:hover:not(:disabled) {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2300ffff"><path d="M0 0h8v8H0z"/><path d="M16 16h8v8h-8z"/></svg>') 0 0, pointer;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .retro-title {
+        font-size: 1.8rem;
+    }
+    
+    .retro-score {
+        font-size: 1.5rem;
+    }
+    
+    .upgrades-container {
+        grid-template-columns: 1fr;
+    }
+} 
